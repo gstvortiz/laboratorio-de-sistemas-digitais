@@ -1,0 +1,74 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity tb_Reg_w is
+end entity tb_Reg_w;
+
+architecture TB_arch of tb_Reg_w is
+  
+  component Reg_W is
+    generic (
+        W : integer := 32
+        );
+    port(
+        CLOCK: in std_logic;
+        RESET : in std_logic;
+        LOAD: in std_logic;
+        D: in std_logic_vector (W - 1 downto 0);
+        Q: out std_logic_vector (W - 1 downto 0)
+    );
+        
+  end component;
+  
+  constant W : natural := 32;
+  signal CLOCK : std_logic := '0';
+  signal RESET : std_logic := '0';
+  signal LOAD : std_logic;
+  signal D : std_logic_vector(W-1 downto 0);
+  signal Q : std_logic_vector(W-1 downto 0);
+  
+begin 
+    intancia : Reg_w generic map (32) port map(CLOCK, RESET, LOAD, D, Q
+    );
+    
+    process
+   begin
+    while now < 100 ns loop 
+      CLOCK <= '0';
+     wait for 300 ps;
+     CLOCK <= '1';
+      wait for 500 ps;
+     end loop;
+    wait;
+  end process;
+  
+   process
+    begin
+        RESET <= '1';
+        wait for 200 ps;
+        RESET <= '0';    
+        wait;
+        end process;
+        
+    process
+    begin
+        LOAD <= '0';
+        wait for 400 ps;
+        LOAD <= '1';    
+        wait;
+        end process;
+        
+    process
+    begin
+        D <= x"00000000";
+        wait for 400 ps;
+        D <= x"00000001";
+        wait for 400 ps;
+        D <= x"00000000";
+        wait for 400 ps;
+        D <= x"00000001";
+        
+        wait;
+        end process;
+end architecture TB_arch;

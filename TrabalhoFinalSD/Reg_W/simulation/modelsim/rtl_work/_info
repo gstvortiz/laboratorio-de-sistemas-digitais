@@ -1,0 +1,77 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\TrabalhoFinalSD\Reg_W\simulation\modelsim
+Ereg_w
+Z1 w1688928865
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\TrabalhoFinalSD\Reg_W\simulation\modelsim
+Z5 8C:/TrabalhoFinalSD/Reg_W/Reg_W.vhd
+Z6 FC:/TrabalhoFinalSD/Reg_W/Reg_W.vhd
+l0
+L4
+V0Y8HiNiMn9;<0mGImahUh3
+Z7 OV;C;10.1d;51
+31
+Z8 !s108 1688928887.571000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/TrabalhoFinalSD/Reg_W/Reg_W.vhd|
+Z10 !s107 C:/TrabalhoFinalSD/Reg_W/Reg_W.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+!s100 2^>kKR?ee=XFI^BmP;YB?2
+!i10b 1
+Amain
+R2
+R3
+DEx4 work 5 reg_w 0 22 0Y8HiNiMn9;<0mGImahUh3
+l17
+L16
+V[a2;A=6VXaa3TjgN_Nj<Q2
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 [ICNQSYbWBiL@E`OVoP5b3
+!i10b 1
+Etb_reg_w
+Z13 w1688928862
+Z14 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R2
+R3
+R4
+Z15 8C:/TrabalhoFinalSD/Reg_W/tb_Reg_W.vhd
+Z16 FC:/TrabalhoFinalSD/Reg_W/tb_Reg_W.vhd
+l0
+L5
+V2SS:41TE>7lW@N:UmbkCI2
+!s100 b?4VdLl@89`Z`NYfQ=^mz2
+R7
+31
+!i10b 1
+Z17 !s108 1688928887.727000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/TrabalhoFinalSD/Reg_W/tb_Reg_W.vhd|
+Z19 !s107 C:/TrabalhoFinalSD/Reg_W/tb_Reg_W.vhd|
+R11
+R12
+Atb_arch
+R14
+R2
+R3
+DEx4 work 8 tb_reg_w 0 22 2SS:41TE>7lW@N:UmbkCI2
+l28
+L8
+V_O476dk[F;JiN0=cgb71]3
+!s100 :h0;ecO0BQJV@HJZO?3?N0
+R7
+31
+!i10b 1
+R17
+R18
+R19
+R11
+R12

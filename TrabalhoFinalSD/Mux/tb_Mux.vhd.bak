@@ -1,0 +1,31 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity tb_Mux is
+end entity tb_Mux;
+
+architecture teste of tb_Mux is
+	component Mux is
+		generic (
+			W : natural := 10
+		);
+		port (
+			CLOCK : in std_logic;
+			RESET : in std_logic;
+			SEL : in std_logic;
+			ENTRADA_1 : in std_logic_vector (W-1 downto 0);
+			ENTRADA_2 : in std_logic_vector (W-1 downto 0);
+			SAIDA : out std_logic_vector (W-1 downto 0)
+		);
+	end component
+
+	signal fio_clock: std_logic := '1';
+	signal fio_sel, fio_reset : std_logic;
+	signal fio_entrada_1, fio_entrada_1, fio_saida : std_logic_vector (W-1 downto 0);
+begin
+
+	instancia_mux: mux port map(CLOCK => fio_clock, RESET => fio_reset, SEL => fio_sel, ENTRADA_1 => fio_entrada_1, ENTRADA_2 => fio_entrada_1, SAIDA	=> fio_saida);
+	fio_clock <= not fio_clock after 1 ns;
+  
+end architecture teste;

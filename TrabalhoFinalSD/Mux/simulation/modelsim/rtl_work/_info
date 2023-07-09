@@ -1,0 +1,79 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\TrabalhoFinalSD\Mux\simulation\modelsim
+Emux
+Z1 w1688928384
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\TrabalhoFinalSD\Mux\simulation\modelsim
+Z6 8C:/TrabalhoFinalSD/Mux/Mux.vhd
+Z7 FC:/TrabalhoFinalSD/Mux/Mux.vhd
+l0
+L5
+Vb_Z=zf=c>Wf5E^42@g[]:1
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1688928442.274000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/TrabalhoFinalSD/Mux/Mux.vhd|
+Z11 !s107 C:/TrabalhoFinalSD/Mux/Mux.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 JT=hc`<gPEAUCTz4^5JE93
+!i10b 1
+Amain
+R2
+R3
+R4
+DEx4 work 3 mux 0 22 b_Z=zf=c>Wf5E^42@g[]:1
+l18
+L17
+V9a_=6O[4M[NKb7RV_hOmz3
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 Pml`[Vb_8gaGiG2O`[ZL33
+!i10b 1
+Etb_mux
+Z14 w1688928414
+R2
+R3
+R4
+R5
+Z15 8C:/TrabalhoFinalSD/Mux/tb_Mux.vhd
+Z16 FC:/TrabalhoFinalSD/Mux/tb_Mux.vhd
+l0
+L5
+VABXKIYn=LY`?bBfJIlmlW0
+!s100 HPnnz^7_^9F_0>3DY@FiK1
+R8
+31
+!i10b 1
+Z17 !s108 1688928442.344000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/TrabalhoFinalSD/Mux/tb_Mux.vhd|
+Z19 !s107 C:/TrabalhoFinalSD/Mux/tb_Mux.vhd|
+R12
+R13
+Ateste
+R2
+R3
+R4
+DEx4 work 6 tb_mux 0 22 ABXKIYn=LY`?bBfJIlmlW0
+l23
+L8
+VEaRKlGO2iZhj8?9R0:@Za0
+!s100 8OKC[^Cc[Hf66kYZDNimm0
+R8
+31
+!i10b 1
+R17
+R18
+R19
+R12
+R13

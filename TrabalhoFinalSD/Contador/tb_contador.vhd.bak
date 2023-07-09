@@ -1,0 +1,24 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity tb_contador is
+end tb_contador;
+
+architecture teste of tb_contador is
+	component contador is
+		generic (
+			W : natural := 32
+		);
+		port(
+			CLOCK : in std_logic;
+			RESET : in std_logic;
+			FINAL_VALUE : in std_logic_vector (W-1 downto 0);
+			DONE : out std_logic
+		);
+	end contador
+	
+	begin
+		instancia_contador: contador port map()
+
+end teste;

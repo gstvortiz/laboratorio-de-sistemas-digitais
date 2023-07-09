@@ -1,0 +1,921 @@
+Analysis & Synthesis report for datapath
+Sun Jul 09 18:05:01 2023
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis DSP Block Usage Summary
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |datapath
+ 12. Parameter Settings for User Entity Instance: Reg_W:Reg_Sph
+ 13. Parameter Settings for User Entity Instance: Reg_W:Reg_Su
+ 14. Parameter Settings for User Entity Instance: Reg_W:Reg_St
+ 15. Parameter Settings for User Entity Instance: Reg_W:Reg_Sr
+ 16. Parameter Settings for User Entity Instance: Reg_W:Reg_Sn
+ 17. Parameter Settings for User Entity Instance: Reg_W:Reg_Vph
+ 18. Parameter Settings for User Entity Instance: Reg_W:Reg_Vu
+ 19. Parameter Settings for User Entity Instance: Reg_W:Reg_Vt
+ 20. Parameter Settings for User Entity Instance: Reg_W:Reg_Vr
+ 21. Parameter Settings for User Entity Instance: Reg_W:Reg_Vn
+ 22. Parameter Settings for User Entity Instance: Reg_W:Reg_Kph
+ 23. Parameter Settings for User Entity Instance: Reg_W:Reg_Ku
+ 24. Parameter Settings for User Entity Instance: Reg_W:Reg_Kt
+ 25. Parameter Settings for User Entity Instance: Reg_W:Reg_Kr
+ 26. Parameter Settings for User Entity Instance: Reg_W:Reg_Kn
+ 27. Parameter Settings for User Entity Instance: Reg_W:Reg_TeR
+ 28. Parameter Settings for User Entity Instance: Reg_W:Reg_TiR
+ 29. Parameter Settings for User Entity Instance: Equacao:Equacao_Te
+ 30. Parameter Settings for User Entity Instance: Equacao_2:Equacao_Ti
+ 31. Parameter Settings for User Entity Instance: Mux:MuxE
+ 32. Parameter Settings for User Entity Instance: Mux:MuxI
+ 33. Parameter Settings for User Entity Instance: Divisor:Divider
+ 34. Parameter Settings for User Entity Instance: Contador:CTe
+ 35. Parameter Settings for User Entity Instance: Contador:CTi
+ 36. Parameter Settings for User Entity Instance: Contador:CTa
+ 37. Parameter Settings for Inferred Entity Instance: Equacao:Equacao_Te|lpm_mult:Mult0
+ 38. Parameter Settings for Inferred Entity Instance: Equacao_2:Equacao_Ti|lpm_mult:Mult6
+ 39. Parameter Settings for Inferred Entity Instance: Equacao_2:Equacao_Ti|lpm_mult:Mult7
+ 40. Parameter Settings for Inferred Entity Instance: Equacao_2:Equacao_Ti|lpm_mult:Mult0
+ 41. Parameter Settings for Inferred Entity Instance: Equacao_2:Equacao_Ti|lpm_mult:Mult5
+ 42. lpm_mult Parameter Settings by Entity Instance
+ 43. Elapsed Time Per Partition
+ 44. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sun Jul 09 18:05:01 2023           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; datapath                                        ;
+; Top-level Entity Name              ; Datapath                                        ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 507                                             ;
+;     Total combinational functions  ; 270                                             ;
+;     Dedicated logic registers      ; 365                                             ;
+; Total registers                    ; 365                                             ;
+; Total pins                         ; 165                                             ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 5                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C35F672C6       ;                    ;
+; Top-level entity name                                                      ; datapath           ; datapath           ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                          ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                      ; Library ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------+---------+
+; ../Reg_W/Reg_W.vhd               ; yes             ; User VHDL File               ; C:/TrabalhoFinalSD/Reg_W/Reg_W.vhd                                ;         ;
+; ../Mux/Mux.vhd                   ; yes             ; User VHDL File               ; C:/TrabalhoFinalSD/Mux/Mux.vhd                                    ;         ;
+; ../Equacao_2/Equacao_2.vhd       ; yes             ; User VHDL File               ; C:/TrabalhoFinalSD/Equacao_2/Equacao_2.vhd                        ;         ;
+; ../Equacao/Equacao.vhd           ; yes             ; User VHDL File               ; C:/TrabalhoFinalSD/Equacao/Equacao.vhd                            ;         ;
+; ../Divisor/Divisor.vhd           ; yes             ; User VHDL File               ; C:/TrabalhoFinalSD/Divisor/Divisor.vhd                            ;         ;
+; ../Contador/Contador.vhd         ; yes             ; User VHDL File               ; C:/TrabalhoFinalSD/Contador/Contador.vhd                          ;         ;
+; Datapath.vhd                     ; yes             ; User VHDL File               ; C:/TrabalhoFinalSD/Datapath/Datapath.vhd                          ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mult.tdf    ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc  ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.inc ;         ;
+; multcore.inc                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/multcore.inc    ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/bypassff.inc    ;         ;
+; altshift.inc                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc    ;         ;
+; db/mult_nus.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/TrabalhoFinalSD/Datapath/db/mult_nus.tdf                       ;         ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 507   ;
+;                                             ;       ;
+; Total combinational functions               ; 270   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 209   ;
+;     -- <=2 input functions                  ; 61    ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 55    ;
+;     -- arithmetic mode                      ; 215   ;
+;                                             ;       ;
+; Total registers                             ; 365   ;
+;     -- Dedicated logic registers            ; 365   ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 165   ;
+; Embedded Multiplier 9-bit elements          ; 5     ;
+; Maximum fan-out node                        ; CLOCK ;
+; Maximum fan-out                             ; 314   ;
+; Total fan-out                               ; 1814  ;
+; Average fan-out                             ; 2.24  ;
++---------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                   ;
++------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node         ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                   ; Library Name ;
++------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------+--------------+
+; |Datapath                          ; 270 (0)           ; 365 (0)      ; 0           ; 5            ; 5       ; 0         ; 165  ; 0            ; |Datapath                                                             ; work         ;
+;    |Contador:CTa|                  ; 33 (33)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Contador:CTa                                                ; work         ;
+;    |Contador:CTe|                  ; 33 (33)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Contador:CTe                                                ; work         ;
+;    |Contador:CTi|                  ; 33 (33)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Contador:CTi                                                ; work         ;
+;    |Equacao:Equacao_Te|            ; 27 (27)           ; 42 (42)      ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |Datapath|Equacao:Equacao_Te                                          ; work         ;
+;       |lpm_mult:Mult0|             ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |Datapath|Equacao:Equacao_Te|lpm_mult:Mult0                           ; work         ;
+;          |mult_nus:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |Datapath|Equacao:Equacao_Te|lpm_mult:Mult0|mult_nus:auto_generated   ; work         ;
+;    |Equacao_2:Equacao_Ti|          ; 112 (112)         ; 120 (120)    ; 0           ; 4            ; 4       ; 0         ; 0    ; 0            ; |Datapath|Equacao_2:Equacao_Ti                                        ; work         ;
+;       |lpm_mult:Mult0|             ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |Datapath|Equacao_2:Equacao_Ti|lpm_mult:Mult0                         ; work         ;
+;          |mult_nus:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |Datapath|Equacao_2:Equacao_Ti|lpm_mult:Mult0|mult_nus:auto_generated ; work         ;
+;       |lpm_mult:Mult5|             ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |Datapath|Equacao_2:Equacao_Ti|lpm_mult:Mult5                         ; work         ;
+;          |mult_nus:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |Datapath|Equacao_2:Equacao_Ti|lpm_mult:Mult5|mult_nus:auto_generated ; work         ;
+;       |lpm_mult:Mult6|             ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |Datapath|Equacao_2:Equacao_Ti|lpm_mult:Mult6                         ; work         ;
+;          |mult_nus:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |Datapath|Equacao_2:Equacao_Ti|lpm_mult:Mult6|mult_nus:auto_generated ; work         ;
+;       |lpm_mult:Mult7|             ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |Datapath|Equacao_2:Equacao_Ti|lpm_mult:Mult7                         ; work         ;
+;          |mult_nus:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |Datapath|Equacao_2:Equacao_Ti|lpm_mult:Mult7|mult_nus:auto_generated ; work         ;
+;    |Mux:MuxE|                      ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Mux:MuxE                                                    ; work         ;
+;    |Mux:MuxI|                      ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Mux:MuxI                                                    ; work         ;
+;    |Reg_W:Reg_Kn|                  ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Reg_W:Reg_Kn                                                ; work         ;
+;    |Reg_W:Reg_Kph|                 ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Reg_W:Reg_Kph                                               ; work         ;
+;    |Reg_W:Reg_Kr|                  ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Reg_W:Reg_Kr                                                ; work         ;
+;    |Reg_W:Reg_Kt|                  ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Reg_W:Reg_Kt                                                ; work         ;
+;    |Reg_W:Reg_Ku|                  ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Reg_W:Reg_Ku                                                ; work         ;
+;    |Reg_W:Reg_Sn|                  ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Reg_W:Reg_Sn                                                ; work         ;
+;    |Reg_W:Reg_Sph|                 ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Reg_W:Reg_Sph                                               ; work         ;
+;    |Reg_W:Reg_Sr|                  ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Reg_W:Reg_Sr                                                ; work         ;
+;    |Reg_W:Reg_St|                  ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Reg_W:Reg_St                                                ; work         ;
+;    |Reg_W:Reg_Su|                  ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Reg_W:Reg_Su                                                ; work         ;
+;    |Reg_W:Reg_TeR|                 ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Reg_W:Reg_TeR                                               ; work         ;
+;    |Reg_W:Reg_TiR|                 ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Reg_W:Reg_TiR                                               ; work         ;
+;    |Reg_W:Reg_Vn|                  ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Reg_W:Reg_Vn                                                ; work         ;
+;    |Reg_W:Reg_Vph|                 ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Reg_W:Reg_Vph                                               ; work         ;
+;    |Reg_W:Reg_Vr|                  ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Reg_W:Reg_Vr                                                ; work         ;
+;    |Reg_W:Reg_Vt|                  ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Reg_W:Reg_Vt                                                ; work         ;
+;    |Reg_W:Reg_Vu|                  ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Reg_W:Reg_Vu                                                ; work         ;
++------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary        ;
++---------------------------------------+-------------+
+; Statistic                             ; Number Used ;
++---------------------------------------+-------------+
+; Simple Multipliers (9-bit)            ; 5           ;
+; Simple Multipliers (18-bit)           ; 0           ;
+; Embedded Multiplier Blocks            ; --          ;
+; Embedded Multiplier 9-bit elements    ; 5           ;
+; Signed Embedded Multipliers           ; 5           ;
+; Unsigned Embedded Multipliers         ; 0           ;
+; Mixed Sign Embedded Multipliers       ; 0           ;
+; Variable Sign Embedded Multipliers    ; 0           ;
+; Dedicated Input Shift Register Chains ; 0           ;
++---------------------------------------+-------------+
+Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
+
+
++-------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                  ;
++----------------------------------------+--------------------------------------------+
+; Register name                          ; Reason for Removal                         ;
++----------------------------------------+--------------------------------------------+
+; Equacao_2:Equacao_Ti|sub4[9..15]       ; Merged with Equacao_2:Equacao_Ti|sub4[8]   ;
+; Equacao_2:Equacao_Ti|sub3[9..15]       ; Merged with Equacao_2:Equacao_Ti|sub3[8]   ;
+; Equacao_2:Equacao_Ti|sub2[9..15]       ; Merged with Equacao_2:Equacao_Ti|sub2[8]   ;
+; Equacao_2:Equacao_Ti|sub1[9..15]       ; Merged with Equacao_2:Equacao_Ti|sub1[8]   ;
+; Equacao:Equacao_Te|sub1[9..15]         ; Merged with Equacao:Equacao_Te|sub1[8]     ;
+; Equacao_2:Equacao_Ti|mult4[17..23]     ; Merged with Equacao_2:Equacao_Ti|mult4[16] ;
+; Equacao_2:Equacao_Ti|mult3[17..23]     ; Merged with Equacao_2:Equacao_Ti|mult3[16] ;
+; Equacao_2:Equacao_Ti|mult2[17..23]     ; Merged with Equacao_2:Equacao_Ti|mult2[16] ;
+; Equacao_2:Equacao_Ti|mult1[17..23]     ; Merged with Equacao_2:Equacao_Ti|mult1[16] ;
+; Equacao:Equacao_Te|mult1[17..23]       ; Merged with Equacao:Equacao_Te|mult1[16]   ;
+; Total Number of Removed Registers = 70 ;                                            ;
++----------------------------------------+--------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 365   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 51    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 197   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |datapath ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; W              ; 8     ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Reg_W:Reg_Sph ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; w              ; 8     ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Reg_W:Reg_Su ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; w              ; 8     ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Reg_W:Reg_St ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; w              ; 8     ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Reg_W:Reg_Sr ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; w              ; 8     ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Reg_W:Reg_Sn ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; w              ; 8     ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Reg_W:Reg_Vph ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; w              ; 8     ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Reg_W:Reg_Vu ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; w              ; 8     ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Reg_W:Reg_Vt ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; w              ; 8     ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Reg_W:Reg_Vr ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; w              ; 8     ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Reg_W:Reg_Vn ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; w              ; 8     ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Reg_W:Reg_Kph ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; w              ; 8     ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Reg_W:Reg_Ku ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; w              ; 8     ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Reg_W:Reg_Kt ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; w              ; 8     ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Reg_W:Reg_Kr ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; w              ; 8     ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Reg_W:Reg_Kn ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; w              ; 8     ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Reg_W:Reg_TeR ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; w              ; 16    ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Reg_W:Reg_TiR ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; w              ; 16    ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Equacao:Equacao_Te ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; w              ; 8     ; Signed Integer                         ;
++----------------+-------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Equacao_2:Equacao_Ti ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; w              ; 8     ; Signed Integer                           ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Mux:MuxE ;
++----------------+-------+------------------------------+
+; Parameter Name ; Value ; Type                         ;
++----------------+-------+------------------------------+
+; w              ; 16    ; Signed Integer               ;
++----------------+-------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Mux:MuxI ;
++----------------+-------+------------------------------+
+; Parameter Name ; Value ; Type                         ;
++----------------+-------+------------------------------+
+; w              ; 16    ; Signed Integer               ;
++----------------+-------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Divisor:Divider ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; w              ; 16    ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Contador:CTe ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; w              ; 16    ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Contador:CTi ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; w              ; 16    ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Contador:CTa ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; w              ; 16    ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Equacao:Equacao_Te|lpm_mult:Mult0 ;
++------------------------------------------------+------------+----------------------+
+; Parameter Name                                 ; Value      ; Type                 ;
++------------------------------------------------+------------+----------------------+
+; AUTO_CARRY_CHAINS                              ; ON         ; AUTO_CARRY           ;
+; IGNORE_CARRY_BUFFERS                           ; OFF        ; IGNORE_CARRY         ;
+; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE         ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE       ;
+; LPM_WIDTHA                                     ; 8          ; Untyped              ;
+; LPM_WIDTHB                                     ; 9          ; Untyped              ;
+; LPM_WIDTHP                                     ; 17         ; Untyped              ;
+; LPM_WIDTHR                                     ; 17         ; Untyped              ;
+; LPM_WIDTHS                                     ; 1          ; Untyped              ;
+; LPM_REPRESENTATION                             ; SIGNED     ; Untyped              ;
+; LPM_PIPELINE                                   ; 0          ; Untyped              ;
+; LATENCY                                        ; 0          ; Untyped              ;
+; INPUT_A_IS_CONSTANT                            ; NO         ; Untyped              ;
+; INPUT_B_IS_CONSTANT                            ; NO         ; Untyped              ;
+; USE_EAB                                        ; OFF        ; Untyped              ;
+; MAXIMIZE_SPEED                                 ; 5          ; Untyped              ;
+; DEVICE_FAMILY                                  ; Cyclone II ; Untyped              ;
+; CARRY_CHAIN                                    ; MANUAL     ; Untyped              ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT        ; TECH_MAPPER_APEX20K  ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped              ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped              ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped              ;
+; CBXI_PARAMETER                                 ; mult_nus   ; Untyped              ;
+; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped              ;
+; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped              ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped              ;
++------------------------------------------------+------------+----------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Equacao_2:Equacao_Ti|lpm_mult:Mult6 ;
++------------------------------------------------+------------+------------------------+
+; Parameter Name                                 ; Value      ; Type                   ;
++------------------------------------------------+------------+------------------------+
+; AUTO_CARRY_CHAINS                              ; ON         ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS                           ; OFF        ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE         ;
+; LPM_WIDTHA                                     ; 8          ; Untyped                ;
+; LPM_WIDTHB                                     ; 9          ; Untyped                ;
+; LPM_WIDTHP                                     ; 17         ; Untyped                ;
+; LPM_WIDTHR                                     ; 17         ; Untyped                ;
+; LPM_WIDTHS                                     ; 1          ; Untyped                ;
+; LPM_REPRESENTATION                             ; SIGNED     ; Untyped                ;
+; LPM_PIPELINE                                   ; 0          ; Untyped                ;
+; LATENCY                                        ; 0          ; Untyped                ;
+; INPUT_A_IS_CONSTANT                            ; NO         ; Untyped                ;
+; INPUT_B_IS_CONSTANT                            ; NO         ; Untyped                ;
+; USE_EAB                                        ; OFF        ; Untyped                ;
+; MAXIMIZE_SPEED                                 ; 5          ; Untyped                ;
+; DEVICE_FAMILY                                  ; Cyclone II ; Untyped                ;
+; CARRY_CHAIN                                    ; MANUAL     ; Untyped                ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT        ; TECH_MAPPER_APEX20K    ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped                ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped                ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped                ;
+; CBXI_PARAMETER                                 ; mult_nus   ; Untyped                ;
+; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped                ;
+; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped                ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped                ;
++------------------------------------------------+------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Equacao_2:Equacao_Ti|lpm_mult:Mult7 ;
++------------------------------------------------+------------+------------------------+
+; Parameter Name                                 ; Value      ; Type                   ;
++------------------------------------------------+------------+------------------------+
+; AUTO_CARRY_CHAINS                              ; ON         ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS                           ; OFF        ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE         ;
+; LPM_WIDTHA                                     ; 8          ; Untyped                ;
+; LPM_WIDTHB                                     ; 9          ; Untyped                ;
+; LPM_WIDTHP                                     ; 17         ; Untyped                ;
+; LPM_WIDTHR                                     ; 17         ; Untyped                ;
+; LPM_WIDTHS                                     ; 1          ; Untyped                ;
+; LPM_REPRESENTATION                             ; SIGNED     ; Untyped                ;
+; LPM_PIPELINE                                   ; 0          ; Untyped                ;
+; LATENCY                                        ; 0          ; Untyped                ;
+; INPUT_A_IS_CONSTANT                            ; NO         ; Untyped                ;
+; INPUT_B_IS_CONSTANT                            ; NO         ; Untyped                ;
+; USE_EAB                                        ; OFF        ; Untyped                ;
+; MAXIMIZE_SPEED                                 ; 5          ; Untyped                ;
+; DEVICE_FAMILY                                  ; Cyclone II ; Untyped                ;
+; CARRY_CHAIN                                    ; MANUAL     ; Untyped                ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT        ; TECH_MAPPER_APEX20K    ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped                ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped                ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped                ;
+; CBXI_PARAMETER                                 ; mult_nus   ; Untyped                ;
+; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped                ;
+; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped                ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped                ;
++------------------------------------------------+------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Equacao_2:Equacao_Ti|lpm_mult:Mult0 ;
++------------------------------------------------+------------+------------------------+
+; Parameter Name                                 ; Value      ; Type                   ;
++------------------------------------------------+------------+------------------------+
+; AUTO_CARRY_CHAINS                              ; ON         ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS                           ; OFF        ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE         ;
+; LPM_WIDTHA                                     ; 8          ; Untyped                ;
+; LPM_WIDTHB                                     ; 9          ; Untyped                ;
+; LPM_WIDTHP                                     ; 17         ; Untyped                ;
+; LPM_WIDTHR                                     ; 17         ; Untyped                ;
+; LPM_WIDTHS                                     ; 1          ; Untyped                ;
+; LPM_REPRESENTATION                             ; SIGNED     ; Untyped                ;
+; LPM_PIPELINE                                   ; 0          ; Untyped                ;
+; LATENCY                                        ; 0          ; Untyped                ;
+; INPUT_A_IS_CONSTANT                            ; NO         ; Untyped                ;
+; INPUT_B_IS_CONSTANT                            ; NO         ; Untyped                ;
+; USE_EAB                                        ; OFF        ; Untyped                ;
+; MAXIMIZE_SPEED                                 ; 5          ; Untyped                ;
+; DEVICE_FAMILY                                  ; Cyclone II ; Untyped                ;
+; CARRY_CHAIN                                    ; MANUAL     ; Untyped                ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT        ; TECH_MAPPER_APEX20K    ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped                ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped                ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped                ;
+; CBXI_PARAMETER                                 ; mult_nus   ; Untyped                ;
+; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped                ;
+; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped                ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped                ;
++------------------------------------------------+------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Equacao_2:Equacao_Ti|lpm_mult:Mult5 ;
++------------------------------------------------+------------+------------------------+
+; Parameter Name                                 ; Value      ; Type                   ;
++------------------------------------------------+------------+------------------------+
+; AUTO_CARRY_CHAINS                              ; ON         ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS                           ; OFF        ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE         ;
+; LPM_WIDTHA                                     ; 8          ; Untyped                ;
+; LPM_WIDTHB                                     ; 9          ; Untyped                ;
+; LPM_WIDTHP                                     ; 17         ; Untyped                ;
+; LPM_WIDTHR                                     ; 17         ; Untyped                ;
+; LPM_WIDTHS                                     ; 1          ; Untyped                ;
+; LPM_REPRESENTATION                             ; SIGNED     ; Untyped                ;
+; LPM_PIPELINE                                   ; 0          ; Untyped                ;
+; LATENCY                                        ; 0          ; Untyped                ;
+; INPUT_A_IS_CONSTANT                            ; NO         ; Untyped                ;
+; INPUT_B_IS_CONSTANT                            ; NO         ; Untyped                ;
+; USE_EAB                                        ; OFF        ; Untyped                ;
+; MAXIMIZE_SPEED                                 ; 5          ; Untyped                ;
+; DEVICE_FAMILY                                  ; Cyclone II ; Untyped                ;
+; CARRY_CHAIN                                    ; MANUAL     ; Untyped                ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT        ; TECH_MAPPER_APEX20K    ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped                ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped                ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped                ;
+; CBXI_PARAMETER                                 ; mult_nus   ; Untyped                ;
+; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped                ;
+; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped                ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped                ;
++------------------------------------------------+------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                              ;
++---------------------------------------+-------------------------------------+
+; Name                                  ; Value                               ;
++---------------------------------------+-------------------------------------+
+; Number of entity instances            ; 5                                   ;
+; Entity Instance                       ; Equacao:Equacao_Te|lpm_mult:Mult0   ;
+;     -- LPM_WIDTHA                     ; 8                                   ;
+;     -- LPM_WIDTHB                     ; 9                                   ;
+;     -- LPM_WIDTHP                     ; 17                                  ;
+;     -- LPM_REPRESENTATION             ; SIGNED                              ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                  ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                  ;
+;     -- USE_EAB                        ; OFF                                 ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                  ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                  ;
+; Entity Instance                       ; Equacao_2:Equacao_Ti|lpm_mult:Mult6 ;
+;     -- LPM_WIDTHA                     ; 8                                   ;
+;     -- LPM_WIDTHB                     ; 9                                   ;
+;     -- LPM_WIDTHP                     ; 17                                  ;
+;     -- LPM_REPRESENTATION             ; SIGNED                              ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                  ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                  ;
+;     -- USE_EAB                        ; OFF                                 ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                  ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                  ;
+; Entity Instance                       ; Equacao_2:Equacao_Ti|lpm_mult:Mult7 ;
+;     -- LPM_WIDTHA                     ; 8                                   ;
+;     -- LPM_WIDTHB                     ; 9                                   ;
+;     -- LPM_WIDTHP                     ; 17                                  ;
+;     -- LPM_REPRESENTATION             ; SIGNED                              ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                  ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                  ;
+;     -- USE_EAB                        ; OFF                                 ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                  ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                  ;
+; Entity Instance                       ; Equacao_2:Equacao_Ti|lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 8                                   ;
+;     -- LPM_WIDTHB                     ; 9                                   ;
+;     -- LPM_WIDTHP                     ; 17                                  ;
+;     -- LPM_REPRESENTATION             ; SIGNED                              ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                  ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                  ;
+;     -- USE_EAB                        ; OFF                                 ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                  ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                  ;
+; Entity Instance                       ; Equacao_2:Equacao_Ti|lpm_mult:Mult5 ;
+;     -- LPM_WIDTHA                     ; 8                                   ;
+;     -- LPM_WIDTHB                     ; 9                                   ;
+;     -- LPM_WIDTHP                     ; 17                                  ;
+;     -- LPM_REPRESENTATION             ; SIGNED                              ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                  ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                  ;
+;     -- USE_EAB                        ; OFF                                 ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                  ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                  ;
++---------------------------------------+-------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sun Jul 09 18:04:59 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off datapath -c datapath
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file /trabalhofinalsd/reg_w/reg_w.vhd
+    Info (12022): Found design unit 1: Reg_W-Main
+    Info (12023): Found entity 1: Reg_W
+Warning (12090): Entity "Mux" obtained from "../Mux/Mux.vhd" instead of from Quartus II megafunction library
+Info (12021): Found 2 design units, including 1 entities, in source file /trabalhofinalsd/mux/mux.vhd
+    Info (12022): Found design unit 1: Mux-Main
+    Info (12023): Found entity 1: Mux
+Info (12021): Found 2 design units, including 1 entities, in source file /trabalhofinalsd/equacao_2/equacao_2.vhd
+    Info (12022): Found design unit 1: Equacao_2-main
+    Info (12023): Found entity 1: Equacao_2
+Info (12021): Found 2 design units, including 1 entities, in source file /trabalhofinalsd/equacao/equacao.vhd
+    Info (12022): Found design unit 1: Equacao-main
+    Info (12023): Found entity 1: Equacao
+Info (12021): Found 2 design units, including 1 entities, in source file /trabalhofinalsd/divisor/divisor.vhd
+    Info (12022): Found design unit 1: Divisor-Main
+    Info (12023): Found entity 1: Divisor
+Info (12021): Found 2 design units, including 1 entities, in source file /trabalhofinalsd/contador/contador.vhd
+    Info (12022): Found design unit 1: Contador-Main
+    Info (12023): Found entity 1: Contador
+Info (12021): Found 2 design units, including 1 entities, in source file datapath.vhd
+    Info (12022): Found design unit 1: Datapath-Main
+    Info (12023): Found entity 1: Datapath
+Info (12021): Found 2 design units, including 1 entities, in source file tb_datapath.vhd
+    Info (12022): Found design unit 1: tb_Datapath-teste
+    Info (12023): Found entity 1: tb_Datapath
+Info (12127): Elaborating entity "datapath" for the top level hierarchy
+Info (12128): Elaborating entity "Reg_W" for hierarchy "Reg_W:Reg_Sph"
+Info (12128): Elaborating entity "Reg_W" for hierarchy "Reg_W:Reg_TeR"
+Info (12128): Elaborating entity "Equacao" for hierarchy "Equacao:Equacao_Te"
+Info (12128): Elaborating entity "Equacao_2" for hierarchy "Equacao_2:Equacao_Ti"
+Info (12128): Elaborating entity "Mux" for hierarchy "Mux:MuxE"
+Info (12128): Elaborating entity "Divisor" for hierarchy "Divisor:Divider"
+Info (12128): Elaborating entity "Contador" for hierarchy "Contador:CTe"
+Info (278001): Inferred 5 megafunctions from design logic
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Equacao:Equacao_Te|Mult0"
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Equacao_2:Equacao_Ti|Mult6"
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Equacao_2:Equacao_Ti|Mult7"
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Equacao_2:Equacao_Ti|Mult0"
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Equacao_2:Equacao_Ti|Mult5"
+Info (12130): Elaborated megafunction instantiation "Equacao:Equacao_Te|lpm_mult:Mult0"
+Info (12133): Instantiated megafunction "Equacao:Equacao_Te|lpm_mult:Mult0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHA" = "8"
+    Info (12134): Parameter "LPM_WIDTHB" = "9"
+    Info (12134): Parameter "LPM_WIDTHP" = "17"
+    Info (12134): Parameter "LPM_WIDTHR" = "17"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_nus.tdf
+    Info (12023): Found entity 1: mult_nus
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 677 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 162 input pins
+    Info (21059): Implemented 3 output pins
+    Info (21061): Implemented 507 logic cells
+    Info (21062): Implemented 5 DSP elements
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4652 megabytes
+    Info: Processing ended: Sun Jul 09 18:05:01 2023
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+

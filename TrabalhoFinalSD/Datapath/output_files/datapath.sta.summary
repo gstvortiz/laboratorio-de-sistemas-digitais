@@ -1,0 +1,101 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'CLOCK'
+Slack : -6.038
+TNS   : -467.776
+
+Type  : Slow Model Setup 'CountCTi'
+Slack : -3.500
+TNS   : -57.788
+
+Type  : Slow Model Setup 'CountCTe'
+Slack : -3.392
+TNS   : -56.254
+
+Type  : Slow Model Setup 'CountCTa'
+Slack : -2.983
+TNS   : -49.611
+
+Type  : Slow Model Hold 'CountCTa'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Hold 'CountCTe'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Hold 'CountCTi'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Hold 'CLOCK'
+Slack : 0.792
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'CLOCK'
+Slack : -1.423
+TNS   : -555.360
+
+Type  : Slow Model Minimum Pulse Width 'CountCTa'
+Slack : -1.380
+TNS   : -18.380
+
+Type  : Slow Model Minimum Pulse Width 'CountCTe'
+Slack : -1.380
+TNS   : -18.380
+
+Type  : Slow Model Minimum Pulse Width 'CountCTi'
+Slack : -1.380
+TNS   : -18.380
+
+Type  : Fast Model Setup 'CLOCK'
+Slack : -2.121
+TNS   : -64.976
+
+Type  : Fast Model Setup 'CountCTi'
+Slack : -1.134
+TNS   : -18.313
+
+Type  : Fast Model Setup 'CountCTe'
+Slack : -1.066
+TNS   : -17.276
+
+Type  : Fast Model Setup 'CountCTa'
+Slack : -0.878
+TNS   : -14.264
+
+Type  : Fast Model Hold 'CountCTa'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'CountCTe'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'CountCTi'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'CLOCK'
+Slack : 0.358
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'CLOCK'
+Slack : -1.519
+TNS   : -580.320
+
+Type  : Fast Model Minimum Pulse Width 'CountCTa'
+Slack : -1.380
+TNS   : -18.380
+
+Type  : Fast Model Minimum Pulse Width 'CountCTe'
+Slack : -1.380
+TNS   : -18.380
+
+Type  : Fast Model Minimum Pulse Width 'CountCTi'
+Slack : -1.380
+TNS   : -18.380
+
+------------------------------------------------------------

@@ -1,0 +1,93 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity tb_Datapath is
+end tb_Datapath;
+
+architecture teste of tb_Datapath is
+	component Datapath is
+		port(
+			-- Entradas de Dispositivos
+			CLOCK										:	in		std_logic;
+			Sph, Su, St, Srs, Sk, Sn, Sp		:	in		std_logic_vector(4 downto 0);
+			
+			-- Entradas do Usuário
+			Auto										:	in		std_logic;
+			Ter										:	in		std_logic_vector(9 downto 0);
+			Tir										:	in		std_logic_vector(9 downto 0);
+			Kph, Ku, Kt, Krs, Kk, Kn, Kp		:	in		std_logic_vector(4 downto 0);
+			Vph, Vu, Vt, Vrs, Vk, Vn, Vp		:	in		std_logic_vector(4 downto 0);
+			
+			-- Entradas da Controladora
+			RESET										:  in		std_logic;
+			loadS, LoadTa							:	in		std_logic;
+			ResetCTi, ResetCTe, ResetCTa		:	in 	std_logic;
+			CountTi, CountTe, CountTa  		:  in    std_logic;
+			
+			-- Saídas para Controladora
+			Ti, Te, Ta								:	out	std_logic
+		);
+	end component Datapath;
+	signal fio_clock: std_logic := '1';
+	signal fio_Sph, fio_Su, fio_St, fio_Srs, fio_Sk, fio_Sn, fio_Sp		:	std_logic_vector(4 downto 0);
+	signal fio_Auto, fio_Ter, fio_Tir												:	std_logic_vector(9 downto 0);
+	signal fio_Kph, fio_Ku, fio_Kt, fio_Krs, fio_Kk, fio_Kn, fio_Kp		:	std_logic_vector(4 downto 0);
+	signal fio_Vph, fio_Vu, fio_Vt, fio_Vrs, fio_Vk, fio_Vn, fio_Vp		:	std_logic_vector(4 downto 0);
+	
+	signal fio_RESET, fio_loadS, fio_LoadTa										:	std_logic;
+	signal fio_ResetCTi, fio_ResetCTe, fio_ResetCTa								:	std_logic;
+	signal fio_CountTi, fio_CountTe, fio_CountTa  								:  std_logic;
+	signal fio_Ti, fio_Te, fio_Ta														:	std_logic;
+	begin
+		instancia_datapath: datapath port map(
+		CLOCK => fio_clock, 
+		Sph => fio_Sph, Su => fio_Su, St => fio_St, Srs => fio_Srs, Sk => fio_Sk, Sn => fio_Sn, Sp => fio_Sp,
+		Auto => fio_Auto, Ter => fio_Ter, Tir => fio_Tir, 
+		Kph => fio_Kph, Ku => fio_Ku, Kt => fio_Kt, Krs => fio_Krs, Kk => fio_Kk, Kn => fio_Kn, Kp => fio_Kp,
+		Vph => fio_Vph, Vu => fio_Vu, Vt => fio_Vt, Vrs => fio_Vrs, Vk => fio_Vk, Vn => fio_Vn, Vp => fio_Vp,
+		RESET => fio_RESET, loadS => fio_loadS, LoadTa => fio_LoadTa,
+		ResetCTi => fio_ResetCTi, ResetCTe => fio_ResetCTe, ResetCTa => fio_ResetCTa,
+		CountTi => fio_CountTi, CountTe => fio_CountTe, CountTa => fio_CountTa,
+		Ti => fio_Ti, Te => fio_Te, Ta => fio_Ta);
+		
+		fio_clock <= not fio_clock after 1 ns;
+		fio_Auto <= '1';
+		fio_Ter <= "0001011100", "0001101111" after 10 ns, "0000101010" after 20 ns, "0010111001" after 30 ns, "0011011100" after 40 ns, "0001010101" after 50 ns, "1001110000" after 60 ns;
+		fio_Kph <= "10001", "00110" after 10 ns, "11001" after 20 ns, "00011" after 30 ns, "01010" after 40 ns, "00100" after 50 ns, "10111" after 60 ns;
+		fio_Vph <= "0110", "1011" after 10 ns, "0101" after 20 ns, "10110" after 30 ns, "00001" after 40 ns, "01101" after 50 ns, "00010" after 60 ns;
+		fio_Sph <= "10011", "10110" after 10 ns, "00011" after 20 ns, "00101" after 30 ns, "10001" after 40 ns, "00110" after 50 ns, "10100" after 60 ns;
+	
+		fio_tir <= "0001011100", "0001101111" after 10 ns, "0000101010" after 20 ns, "0010111001" after 30 ns, "0011011100" after 40 ns, "0001010101" after 50 ns, "0011110000" after 60 ns;	
+		fio_ku <= "11011", "01010" after 10 ns, "10101" after 20 ns, "01110" after 30 ns, "11100" after 40 ns, "00111" after 50 ns, "10010" after 60 ns;
+		fio_kt <= "00101", "10010" after 10 ns, "01001" after 20 ns, "10100" after 30 ns, "01010" after 40 ns, "11011" after 50 ns, "01110" after 60 ns;
+		fio_krs <= "10010", "01101" after 10 ns, "11010" after 20 ns, "00111" after 30 ns, "10101" after 40 ns, "01010" after 50 ns, "11100" after 60 ns;
+		fio_kk <= "01010", "10101" after 10 ns, "01110" after 20 ns, "11100" after 30 ns, "00111" after 40 ns, "10010" after 50 ns, "01001" after 60 ns;
+		fio_kn <= "10101", "01010" after 10 ns, "11100" after 20 ns, "00111" after 30 ns, "10010" after 40 ns, "01001" after 50 ns, "10100" after 60 ns;
+		fio_kp <= "01110", "11100" after 10 ns, "00111" after 20 ns, "10010" after 30 ns, "01001" after 40 ns, "10100" after 50 ns, "01010" after 60 ns;
+
+		fio_vu <= "11100", "00111" after 10 ns, "10010" after 20 ns, "01001" after 30 ns, "10100" after 40 ns, "01010" after 50 ns, "11011" after 60 ns;
+		fio_vt <= "00111", "10010" after 10 ns, "01001" after 20 ns, "10100" after 30 ns, "01010" after 40 ns, "11100" after 50 ns, "00111" after 60 ns;
+		fio_vrs <= "10010", "01101" after 10 ns, "11010" after 20 ns, "00111" after 30 ns, "10101" after 40 ns, "01010" after 50 ns, "11100" after 60 ns;
+		fio_vk <= "01010", "10101" after 10 ns, "01110" after 20 ns, "11100" after 30 ns, "00111" after 40 ns, "10010" after 50 ns, "01001" after 60 ns;
+		fio_vn <= "10101", "01010" after 10 ns, "11100" after 20 ns, "00111" after 30 ns, "10010" after 40 ns, "01001" after 50 ns, "10100" after 60 ns;
+		fio_vp <= "01110", "11100" after 10 ns, "00111" after 20 ns, "10010" after 30 ns, "01001" after 40 ns, "10100" after 50 ns, "01010" after 60 ns;
+
+		fio_su <= "10101", "01010" after 10 ns, "11100" after 20 ns, "00111" after 30 ns, "10010" after 40 ns, "01001" after 50 ns, "10100" after 60 ns;
+		fio_st <= "01110", "11100" after 10 ns, "00111" after 20 ns, "10010" after 30 ns, "01001" after 40 ns, "10100" after 50 ns, "01010" after 60 ns;
+		fio_srs <= "11100", "00111" after 10 ns, "10010" after 20 ns, "01001" after 30 ns, "10100" after 40 ns, "01010" after 50 ns, "11011" after 60 ns;
+		fio_sk <= "00111", "10010" after 10 ns, "01001" after 20 ns, "10100" after 30 ns, "01010" after 40 ns, "11100" after 50 ns, "00111" after 60 ns;
+		fio_sn <= "10010", "01101" after 10 ns, "11010" after 20 ns, "00111" after 30 ns, "10101" after 40 ns, "01010" after 50 ns, "11100" after 60 ns;
+		fio_sp <= "01010", "10101" after 10 ns, "01110" after 20 ns, "11100" after 30 ns, "00111" after 40 ns, "10010" after 50 ns, "01001" after 60 ns;
+
+		
+		fio_RESET <= '1';
+		fio_loadS <= '0', '1' after 5ns, '0' after 10 ns;
+		fio_LoadTa <= '1';
+		fio_ResetCTi <= '0';
+		fio_ResetCTe <= '0';
+		fio_ResetCTa <= '0';
+		fio_CountTi <= '0';
+		io_CountTe <=  '0';
+		fio_CountTa <= '0';
+end teste;

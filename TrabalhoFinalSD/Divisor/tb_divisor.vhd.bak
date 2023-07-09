@@ -1,0 +1,38 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity DivideByTwo_TB is
+end DivideByTwo_TB;
+
+architecture Behavioral of DivideByTwo_TB is
+    -- Componentes do testbench
+    component DivideByTwo is
+        Port ( num_in : in  STD_LOGIC_VECTOR(7 downto 0);
+               result : out STD_LOGIC_VECTOR(7 downto 0));
+    end component;
+
+    -- Sinais do testbench
+    signal num_in_tb : STD_LOGIC_VECTOR(7 downto 0);
+    signal result_tb : STD_LOGIC_VECTOR(7 downto 0);
+begin
+    -- Instanciação do componente
+    uut: DivideByTwo
+        port map (num_in => num_in_tb, result => result_tb);
+
+    -- Processo de estímulo
+    stim_proc: process
+    begin
+        -- Inicializa o sinal de entrada
+        num_in_tb <= "01010101";
+
+        -- Aguarda um período de clock
+        wait for 10 ns;
+
+        -- Imprime os valores de entrada e saída
+        report "num_in = " & to_string(num_in_tb);
+        report "result = " & to_string(result_tb);
+
+        -- Finaliza a simulação
+        wait;
+    end process;
+end Behavioral;

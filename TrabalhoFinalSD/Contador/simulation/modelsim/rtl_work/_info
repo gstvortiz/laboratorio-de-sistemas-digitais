@@ -1,0 +1,79 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\TrabalhoFinalSD\Contador\simulation\modelsim
+Econtador
+Z1 w1688931363
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\TrabalhoFinalSD\Contador\simulation\modelsim
+Z6 8C:/TrabalhoFinalSD/Contador/Contador.vhd
+Z7 FC:/TrabalhoFinalSD/Contador/Contador.vhd
+l0
+L5
+VYM81L72c021O4V1@82Pk;0
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1688931529.530000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/TrabalhoFinalSD/Contador/Contador.vhd|
+Z11 !s107 C:/TrabalhoFinalSD/Contador/Contador.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 9JAYKSiF2S6KHlK3<SAg?3
+!i10b 1
+Amain
+R2
+R3
+R4
+DEx4 work 8 contador 0 22 YM81L72c021O4V1@82Pk;0
+l19
+L17
+VRL1BN3DMn?DkRkg3EH`QR3
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 6jzcjlFM86_]1aK:[=>fY3
+!i10b 1
+Etb_contador
+Z14 w1688931517
+R2
+R3
+R4
+R5
+Z15 8C:/TrabalhoFinalSD/Contador/tb_contador.vhd
+Z16 FC:/TrabalhoFinalSD/Contador/tb_contador.vhd
+l0
+L5
+V_Pe7U;Q[9U6b;3@J^ki]]1
+!s100 9gV6cA0ZLL=AaNDfaO:FN2
+R8
+31
+!i10b 1
+Z17 !s108 1688931529.584000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/TrabalhoFinalSD/Contador/tb_contador.vhd|
+Z19 !s107 C:/TrabalhoFinalSD/Contador/tb_contador.vhd|
+R12
+R13
+Ateste
+R2
+R3
+R4
+DEx4 work 11 tb_contador 0 22 _Pe7U;Q[9U6b;3@J^ki]]1
+l25
+L8
+VjLbdofUz8P475PJ4_bZh^3
+!s100 ]42fz@Pn;]I7?ZanjBJJY2
+R8
+31
+!i10b 1
+R17
+R18
+R19
+R12
+R13

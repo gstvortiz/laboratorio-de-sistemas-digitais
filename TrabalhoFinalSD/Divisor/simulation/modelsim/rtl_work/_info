@@ -1,0 +1,79 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\TrabalhoFinalSD\Divisor\simulation\modelsim
+Edivisor
+Z1 w1688928243
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\TrabalhoFinalSD\Divisor\simulation\modelsim
+Z6 8C:/TrabalhoFinalSD/Divisor/Divisor.vhd
+Z7 FC:/TrabalhoFinalSD/Divisor/Divisor.vhd
+l0
+L5
+VAMXi2V3C5;E6?a4Kd[7QJ1
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1688928314.009000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/TrabalhoFinalSD/Divisor/Divisor.vhd|
+Z11 !s107 C:/TrabalhoFinalSD/Divisor/Divisor.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 4H7f;nIzR3@[;km1ll2W50
+!i10b 1
+Amain
+R2
+R3
+R4
+DEx4 work 7 divisor 0 22 AMXi2V3C5;E6?a4Kd[7QJ1
+l16
+L15
+VhDdc6obZVmA5ojHCelDBD3
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 2]aA?CzGhZ1D^?a_CkS;:0
+!i10b 1
+Etb_divisor
+Z14 w1688928294
+R2
+R3
+R4
+R5
+Z15 8C:/TrabalhoFinalSD/Divisor/tb_divisor.vhd
+Z16 FC:/TrabalhoFinalSD/Divisor/tb_divisor.vhd
+l0
+L5
+VjIQD[N;_GBo8KKcVA<dch1
+!s100 ]gEDM9D0_PRKLlTgi6L1L0
+R8
+31
+!i10b 1
+Z17 !s108 1688928314.078000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/TrabalhoFinalSD/Divisor/tb_divisor.vhd|
+Z19 !s107 C:/TrabalhoFinalSD/Divisor/tb_divisor.vhd|
+R12
+R13
+Ateste
+R2
+R3
+R4
+DEx4 work 10 tb_divisor 0 22 jIQD[N;_GBo8KKcVA<dch1
+l22
+L8
+V=ZC4KibFVQAV<dzc7z5_V3
+!s100 G`N=2R4>:Q@H2^_oX3T3i3
+R8
+31
+!i10b 1
+R17
+R18
+R19
+R12
+R13

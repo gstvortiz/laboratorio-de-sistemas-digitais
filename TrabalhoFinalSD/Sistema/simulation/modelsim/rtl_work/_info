@@ -1,0 +1,373 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\TrabalhoFinalSD\Sistema\simulation\modelsim
+Econtador
+Z1 w1688931363
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\TrabalhoFinalSD\Sistema\simulation\modelsim
+Z6 8C:/TrabalhoFinalSD/Contador/Contador.vhd
+Z7 FC:/TrabalhoFinalSD/Contador/Contador.vhd
+l0
+L5
+VYM81L72c021O4V1@82Pk;0
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1688938683.484000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/TrabalhoFinalSD/Contador/Contador.vhd|
+Z11 !s107 C:/TrabalhoFinalSD/Contador/Contador.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 9JAYKSiF2S6KHlK3<SAg?3
+!i10b 1
+Amain
+R2
+R3
+R4
+DEx4 work 8 contador 0 22 YM81L72c021O4V1@82Pk;0
+l19
+L17
+VRL1BN3DMn?DkRkg3EH`QR3
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 6jzcjlFM86_]1aK:[=>fY3
+!i10b 1
+Econtroladora
+Z14 w1688936224
+R2
+R3
+R4
+R5
+Z15 8C:/TrabalhoFinalSD/Controladora/Controladora.vhd
+Z16 FC:/TrabalhoFinalSD/Controladora/Controladora.vhd
+l0
+L5
+VfHaNIPVe?UI8k[3c33el71
+R8
+31
+Z17 !s108 1688938683.424000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/TrabalhoFinalSD/Controladora/Controladora.vhd|
+Z19 !s107 C:/TrabalhoFinalSD/Controladora/Controladora.vhd|
+R12
+R13
+!s100 jT1?F^mCcz23<GCn7h>l<0
+!i10b 1
+Aarch
+R2
+R3
+R4
+DEx4 work 12 controladora 0 22 fHaNIPVe?UI8k[3c33el71
+l33
+L29
+Vadak_UE9j[ITGI9YU[SRj3
+R8
+31
+R17
+R18
+R19
+R12
+R13
+!s100 4^k]UYmiB939:_e6[ic6d2
+!i10b 1
+Edatapath
+Z20 w1688932033
+R2
+R3
+R4
+R5
+Z21 8C:/TrabalhoFinalSD/Datapath/Datapath.vhd
+Z22 FC:/TrabalhoFinalSD/Datapath/Datapath.vhd
+l0
+L5
+VJ2T`43?mcQm=EN6>mY1m`1
+R8
+31
+Z23 !s108 1688938683.364000
+Z24 !s90 -reportprogress|300|-93|-work|work|C:/TrabalhoFinalSD/Datapath/Datapath.vhd|
+Z25 !s107 C:/TrabalhoFinalSD/Datapath/Datapath.vhd|
+R12
+R13
+!s100 a>5i2jmcj>g3M3UM;hYCO0
+!i10b 1
+Amain
+R2
+R3
+R4
+DEx4 work 8 datapath 0 22 J2T`43?mcQm=EN6>mY1m`1
+l109
+L23
+V33I7QEg;GT=e2MROWmCU?3
+R8
+31
+R23
+R24
+R25
+R12
+R13
+!s100 hY]eOP0JR4UjShzEY:FQf0
+!i10b 1
+Edivisor
+Z26 w1688928243
+R2
+R3
+R4
+R5
+Z27 8C:/TrabalhoFinalSD/Divisor/Divisor.vhd
+Z28 FC:/TrabalhoFinalSD/Divisor/Divisor.vhd
+l0
+L5
+VAMXi2V3C5;E6?a4Kd[7QJ1
+R8
+31
+Z29 !s108 1688938683.298000
+Z30 !s90 -reportprogress|300|-93|-work|work|C:/TrabalhoFinalSD/Divisor/Divisor.vhd|
+Z31 !s107 C:/TrabalhoFinalSD/Divisor/Divisor.vhd|
+R12
+R13
+!s100 4H7f;nIzR3@[;km1ll2W50
+!i10b 1
+Amain
+R2
+R3
+R4
+DEx4 work 7 divisor 0 22 AMXi2V3C5;E6?a4Kd[7QJ1
+l16
+L15
+VhDdc6obZVmA5ojHCelDBD3
+R8
+31
+R29
+R30
+R31
+R12
+R13
+!s100 2]aA?CzGhZ1D^?a_CkS;:0
+!i10b 1
+Eequacao
+Z32 w1688929621
+R2
+R3
+R4
+R5
+Z33 8C:/TrabalhoFinalSD/Equacao/Equacao.vhd
+Z34 FC:/TrabalhoFinalSD/Equacao/Equacao.vhd
+l0
+L5
+VIdaCkiL[[kWoZz;Y7fe7j1
+R8
+31
+Z35 !s108 1688938683.239000
+Z36 !s90 -reportprogress|300|-93|-work|work|C:/TrabalhoFinalSD/Equacao/Equacao.vhd|
+Z37 !s107 C:/TrabalhoFinalSD/Equacao/Equacao.vhd|
+R12
+R13
+!s100 <m1`?m]Q9FQj::FInTF8j1
+!i10b 1
+Amain
+R2
+R3
+R4
+DEx4 work 7 equacao 0 22 IdaCkiL[[kWoZz;Y7fe7j1
+l24
+L21
+V3V`_c62LS1cCXEJi?AQQ_3
+R8
+31
+R35
+R36
+R37
+R12
+R13
+!s100 2835_U_CBLZoC;mL5EQV71
+!i10b 1
+Eequacao_2
+Z38 w1688930646
+R2
+R3
+R4
+R5
+Z39 8C:/TrabalhoFinalSD/Equacao_2/Equacao_2.vhd
+Z40 FC:/TrabalhoFinalSD/Equacao_2/Equacao_2.vhd
+l0
+L5
+VFT2c95C7a8k^hG4l6mYgK1
+R8
+31
+Z41 !s108 1688938683.175000
+Z42 !s90 -reportprogress|300|-93|-work|work|C:/TrabalhoFinalSD/Equacao_2/Equacao_2.vhd|
+Z43 !s107 C:/TrabalhoFinalSD/Equacao_2/Equacao_2.vhd|
+R12
+R13
+!s100 b`3Fc5n5<Y@m5zcZc0<M_2
+!i10b 1
+Amain
+R2
+R3
+R4
+DEx4 work 9 equacao_2 0 22 FT2c95C7a8k^hG4l6mYgK1
+l28
+L23
+V7aV;aiEEBCf1B@MQBC3o>1
+R8
+31
+R41
+R42
+R43
+R12
+R13
+!s100 2i1ndYB:;EEAk9dZ]7QM>1
+!i10b 1
+Emux
+Z44 w1688928384
+R2
+R3
+R4
+R5
+Z45 8C:/TrabalhoFinalSD/Mux/Mux.vhd
+Z46 FC:/TrabalhoFinalSD/Mux/Mux.vhd
+l0
+L5
+Vb_Z=zf=c>Wf5E^42@g[]:1
+R8
+31
+Z47 !s108 1688938683.113000
+Z48 !s90 -reportprogress|300|-93|-work|work|C:/TrabalhoFinalSD/Mux/Mux.vhd|
+Z49 !s107 C:/TrabalhoFinalSD/Mux/Mux.vhd|
+R12
+R13
+!s100 JT=hc`<gPEAUCTz4^5JE93
+!i10b 1
+Amain
+R2
+R3
+R4
+DEx4 work 3 mux 0 22 b_Z=zf=c>Wf5E^42@g[]:1
+l18
+L17
+V9a_=6O[4M[NKb7RV_hOmz3
+R8
+31
+R47
+R48
+R49
+R12
+R13
+!s100 Pml`[Vb_8gaGiG2O`[ZL33
+!i10b 1
+Ereg_w
+Z50 w1688928865
+R3
+R4
+R5
+Z51 8C:/TrabalhoFinalSD/Reg_W/Reg_W.vhd
+Z52 FC:/TrabalhoFinalSD/Reg_W/Reg_W.vhd
+l0
+L4
+V0Y8HiNiMn9;<0mGImahUh3
+R8
+31
+Z53 !s108 1688938683.056000
+Z54 !s90 -reportprogress|300|-93|-work|work|C:/TrabalhoFinalSD/Reg_W/Reg_W.vhd|
+Z55 !s107 C:/TrabalhoFinalSD/Reg_W/Reg_W.vhd|
+R12
+R13
+!s100 2^>kKR?ee=XFI^BmP;YB?2
+!i10b 1
+Amain
+R3
+R4
+DEx4 work 5 reg_w 0 22 0Y8HiNiMn9;<0mGImahUh3
+l17
+L16
+V[a2;A=6VXaa3TjgN_Nj<Q2
+R8
+31
+R53
+R54
+R55
+R12
+R13
+!s100 [ICNQSYbWBiL@E`OVoP5b3
+!i10b 1
+Esistema
+Z56 w1688936813
+R2
+R3
+R4
+R5
+Z57 8C:/TrabalhoFinalSD/Sistema/sistema.vhd
+Z58 FC:/TrabalhoFinalSD/Sistema/sistema.vhd
+l0
+L5
+V?Gi_fkM``IWdhhk1aTz1P0
+R8
+31
+Z59 !s108 1688938683.544000
+Z60 !s90 -reportprogress|300|-93|-work|work|C:/TrabalhoFinalSD/Sistema/sistema.vhd|
+Z61 !s107 C:/TrabalhoFinalSD/Sistema/sistema.vhd|
+R12
+R13
+!s100 o>]aj`8bJf5WoR7L1FNUN0
+!i10b 1
+Amain
+R2
+R3
+R4
+DEx4 work 7 sistema 0 22 ?Gi_fkM``IWdhhk1aTz1P0
+l70
+L20
+V=Fc9n6W@kZ<eDFbiLh^`80
+R8
+31
+R59
+R60
+R61
+R12
+R13
+!s100 kb:AUiRDe14AIV=k7dGH^1
+!i10b 1
+Etb_sistema
+Z62 w1688937379
+R2
+R3
+R4
+R5
+Z63 8C:/TrabalhoFinalSD/Sistema/tb_Sistema.vhd
+Z64 FC:/TrabalhoFinalSD/Sistema/tb_Sistema.vhd
+l0
+L5
+V?SOjV3jY?Pbe3[nz^lM:A2
+!s100 QIIGna`^ijQ;RjRm^bVPz2
+R8
+31
+!i10b 1
+Z65 !s108 1688938683.601000
+Z66 !s90 -reportprogress|300|-93|-work|work|C:/TrabalhoFinalSD/Sistema/tb_Sistema.vhd|
+Z67 !s107 C:/TrabalhoFinalSD/Sistema/tb_Sistema.vhd|
+R12
+R13
+Ateste
+R2
+R3
+R4
+DEx4 work 10 tb_sistema 0 22 ?SOjV3jY?Pbe3[nz^lM:A2
+l34
+L8
+VE:1USRh1Cmm>WFK7Y;EYW0
+!s100 cND=Y5C]h<3f5?^XZKSbJ2
+R8
+31
+!i10b 1
+R65
+R66
+R67
+R12
+R13

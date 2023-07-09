@@ -1,0 +1,24 @@
+|Controladora
+CLK => estado_atual~1.DATAIN
+C => estado_atual~3.DATAIN
+Te => Selector1.IN3
+Te => estado_proximo.s3.DATAB
+Ti => Selector2.IN3
+Ti => estado_proximo.s5.DATAB
+Ta => Selector0.IN3
+Ta => estado_proximo.s7.DATAB
+LoadAll <= LoadAll.DB_MAX_OUTPUT_PORT_TYPE
+LoadS <= LoadS.DB_MAX_OUTPUT_PORT_TYPE
+ResetCte <= ResetCte.DB_MAX_OUTPUT_PORT_TYPE
+CountTe <= CountTe.DB_MAX_OUTPUT_PORT_TYPE
+ResetCti <= ResetCti.DB_MAX_OUTPUT_PORT_TYPE
+CountTi <= CountTi.DB_MAX_OUTPUT_PORT_TYPE
+ResetCta <= ResetCta.DB_MAX_OUTPUT_PORT_TYPE
+CountTa <= CountTa.DB_MAX_OUTPUT_PORT_TYPE
+LED1 <= LED1.DB_MAX_OUTPUT_PORT_TYPE
+LED2 <= LED2.DB_MAX_OUTPUT_PORT_TYPE
+LED3 <= LED3.DB_MAX_OUTPUT_PORT_TYPE
+LED4 <= LED4.DB_MAX_OUTPUT_PORT_TYPE
+I <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+

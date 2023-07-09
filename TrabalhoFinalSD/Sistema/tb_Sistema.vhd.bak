@@ -1,0 +1,76 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity Sistema is
+	generic (
+		W : integer := 8
+	);
+	port(
+		CLOCK, Auto, C					:	in		std_logic;
+		TiR, TeR							:  in		std_logic_vector((2*W)-1 downto 0);
+		Sph, Su, St, Sr, Sn			:	in		std_logic_vector(W-1 downto 0);
+		Vph, Vu, Vt, Vr, Vn			:	in		std_logic_vector(W-1 downto 0);
+		Kph, Ku, Kt, Kr, Kn			:	in		std_logic_vector(W-1 downto 0);
+		
+		I, LED1, LED2, LED3, LED4  :	out	std_logic
+	);
+end entity;
+
+architecture Main of	Sistema is
+
+	component Controladora is
+		port(
+			CLK         : in std_logic;
+			C           : in std_logic;	
+			Te          : in std_logic;   
+			Ti          : in std_logic;  
+			Ta          : in std_logic; 
+			
+			LoadAll		: out std_logic;
+			LoadS       : out std_logic;
+			ResetCte    : out std_logic;
+			CountTe     : out std_logic;
+			ResetCti    : out std_logic;
+			CountTi     : out std_logic;
+			ResetCta    : out std_logic;
+			CountTa     : out std_logic;
+			LED1			: out std_logic;
+			LED2			: out std_logic;
+			LED3			: out std_logic;
+			LED4			: out std_logic;
+			I           : out std_logic
+		);
+	end component;
+	
+	component Datapath is
+		generic (
+			W : integer := 8
+		);
+		port(
+			CLOCK, Auto					:	in		std_logic;
+			Tir, Ter						:	in		std_logic_vector((2*W)-1 downto 0);
+			Sph, Su, St, Sr, Sn		:	in		std_logic_vector(W-1 downto 0);
+			Vph, Vu, Vt, Vr, Vn		:	in		std_logic_vector(W-1 downto 0);
+			Kph, Ku, Kt, Kr, Kn		:	in		std_logic_vector(W-1 downto 0);
+			
+			loadS, loadAll																:	in		std_logic;
+			ResetCTe, CountCTe, ResetCTi, CountCTi, ResetCTa, CountCTa	:	in 	std_logic;
+			
+			Te, Ti, Ta	:	out	std_logic
+		);
+	end component;
+	
+	signal fio_LoadAll, fio_LoadS				:	std_logic;
+	signal fio_ResetCte, fio_CountCte		:	std_logic;
+	signal fio_ResetCti, fio_CountCti		:	std_logic;
+	signal fio_ResetCta, fio_CountCta		:	std_logic;
+	signal fio_Te, fio_Ti, fio_Ta				: 	std_logic;	
+	
+begin
+
+instancia_Datapath: Datapath port map (CLOCK => CLOCK, Auto => Auto, Tir => TiR, Ter => Ter, Sph => Sph, Su => Su, St => St, Sr => Sr, Sn => Sn, Vph => Vph, Vu => Vu, Vt => Vt, Vr => Vr, Vn => Vn, Kph => Kph, Ku => Ku, Kt => Kt, Kr => Kr, Kn => Kn, loadS => fio_LoadS, loadAll => fio_LoadAll, ResetCTe => fio_ResetCte, CountCTe => fio_CountCte, ResetCTi => fio_ResetCti, CountCTi => fio_CountCti, ResetCTa => fio_ResetCta, CountCTa => fio_CountCta, Te => fio_Te, Ti => fio_Ti, Ta => fio_Ta);
+instancia_Controladora: Controladora port map (CLK => CLOCK,C => C,Te => fio_Te,Ti => fio_Ti,Ta => fio_Ta,LoadAll => fio_LoadAll,LoadS => fio_LoadS,ResetCte => fio_ResetCte,CountTe => fio_CountCte,ResetCti => fio_ResetCti,CountTi => fio_CountCti,ResetCta => fio_ResetCta,CountTa => fio_CountCta, LED1 => LED1,LED2 => LED2,LED3 => LED3,LED4 => LED4,I => I);
+
+end Main;
+

@@ -1,0 +1,35 @@
+|Divisor
+dividendo[0] => ~NO_FANOUT~
+dividendo[1] => quociente[0].DATAIN
+dividendo[2] => quociente[1].DATAIN
+dividendo[3] => quociente[2].DATAIN
+dividendo[4] => quociente[3].DATAIN
+dividendo[5] => quociente[4].DATAIN
+dividendo[6] => quociente[5].DATAIN
+dividendo[7] => quociente[6].DATAIN
+dividendo[8] => quociente[7].DATAIN
+dividendo[9] => quociente[8].DATAIN
+dividendo[10] => quociente[9].DATAIN
+dividendo[11] => quociente[10].DATAIN
+dividendo[12] => quociente[11].DATAIN
+dividendo[13] => quociente[12].DATAIN
+dividendo[14] => quociente[13].DATAIN
+dividendo[15] => quociente[14].DATAIN
+quociente[0] <= dividendo[1].DB_MAX_OUTPUT_PORT_TYPE
+quociente[1] <= dividendo[2].DB_MAX_OUTPUT_PORT_TYPE
+quociente[2] <= dividendo[3].DB_MAX_OUTPUT_PORT_TYPE
+quociente[3] <= dividendo[4].DB_MAX_OUTPUT_PORT_TYPE
+quociente[4] <= dividendo[5].DB_MAX_OUTPUT_PORT_TYPE
+quociente[5] <= dividendo[6].DB_MAX_OUTPUT_PORT_TYPE
+quociente[6] <= dividendo[7].DB_MAX_OUTPUT_PORT_TYPE
+quociente[7] <= dividendo[8].DB_MAX_OUTPUT_PORT_TYPE
+quociente[8] <= dividendo[9].DB_MAX_OUTPUT_PORT_TYPE
+quociente[9] <= dividendo[10].DB_MAX_OUTPUT_PORT_TYPE
+quociente[10] <= dividendo[11].DB_MAX_OUTPUT_PORT_TYPE
+quociente[11] <= dividendo[12].DB_MAX_OUTPUT_PORT_TYPE
+quociente[12] <= dividendo[13].DB_MAX_OUTPUT_PORT_TYPE
+quociente[13] <= dividendo[14].DB_MAX_OUTPUT_PORT_TYPE
+quociente[14] <= dividendo[15].DB_MAX_OUTPUT_PORT_TYPE
+quociente[15] <= <GND>
+
+

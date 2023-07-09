@@ -1,0 +1,6 @@
+v1
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,Datapath:instancia_Datapath|Equacao_2:Equacao_Ti|lpm_mult:Mult5|mult_nus:auto_generated|mac_out2,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,Datapath:instancia_Datapath|Equacao_2:Equacao_Ti|lpm_mult:Mult0|mult_nus:auto_generated|mac_out2,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,Datapath:instancia_Datapath|Equacao_2:Equacao_Ti|lpm_mult:Mult7|mult_nus:auto_generated|mac_out2,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,Datapath:instancia_Datapath|Equacao_2:Equacao_Ti|lpm_mult:Mult6|mult_nus:auto_generated|mac_out2,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,Datapath:instancia_Datapath|Equacao:Equacao_Te|lpm_mult:Mult0|mult_nus:auto_generated|mac_out2,

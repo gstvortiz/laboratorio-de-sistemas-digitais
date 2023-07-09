@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\TrabalhoFinalSD\Sistema\simulation\modelsim
+Esistema
+Z1 w1688937090
+Z2 DPx4 ieee 16 vital_primitives 0 22 9W@YP9_VCb?_GCJ8e:;YQ0
+Z3 DPx9 cycloneii 19 cycloneii_atom_pack 0 22 zUjlM<IUJVWSWg:L2<>ic3
+Z4 DPx4 ieee 12 vital_timing 0 22 7h8zz2S4HVg:a;2TBMI[j1
+Z5 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z6 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z7 DPx9 cycloneii 20 cycloneii_components 0 22 h@gSJ;Al32oYg[7^PbnAR0
+Z8 dC:\TrabalhoFinalSD\Sistema\simulation\modelsim
+Z9 8Sistema.vho
+Z10 FSistema.vho
+l0
+L34
+VG=`d@ENAAb]jf4eYQ<Ng?1
+Z11 OV;C;10.1d;51
+31
+Z12 !s108 1688937233.602000
+Z13 !s90 -reportprogress|300|-93|-work|work|Sistema.vho|
+Z14 !s107 Sistema.vho|
+Z15 o-93 -work work -O0
+Z16 tExplicit 1
+!s100 oczFgKc5dLc5^f_E5:R3E3
+!i10b 1
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 7 sistema 0 22 G=`d@ENAAb]jf4eYQ<Ng?1
+l967
+L227
+V8:3IRMDj<80hIH?c_e3P[1
+R11
+31
+R12
+R13
+R14
+R15
+R16
+!s100 FS]cb[Chl@I[Z80;WTQHo3
+!i10b 1
+Etb_sistema
+Z17 w1688936507
+Z18 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R5
+R6
+R8
+Z19 8C:/TrabalhoFinalSD/Sistema/tb_Sistema.vhd
+Z20 FC:/TrabalhoFinalSD/Sistema/tb_Sistema.vhd
+l0
+L5
+V?SOjV3jY?Pbe3[nz^lM:A2
+!s100 QIIGna`^ijQ;RjRm^bVPz2
+R11
+31
+!i10b 1
+Z21 !s108 1688937233.770000
+Z22 !s90 -reportprogress|300|-93|-work|work|C:/TrabalhoFinalSD/Sistema/tb_Sistema.vhd|
+Z23 !s107 C:/TrabalhoFinalSD/Sistema/tb_Sistema.vhd|
+R15
+R16
+Ateste
+R18
+R5
+R6
+DEx4 work 10 tb_sistema 0 22 ?SOjV3jY?Pbe3[nz^lM:A2
+l34
+L8
+VGG9<:O_eblN`3b_YMInc_2
+!s100 2edb=2fh4]Nkl3<BEBDo[2
+R11
+31
+!i10b 1
+R21
+R22
+R23
+R15
+R16
